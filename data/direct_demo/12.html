@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV.UK Prototype</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Cookie Banner -->
+    <div class="bg-gray-200 p-4">
+        <p class="text-sm">Cookies on GOV.UK</p>
+        <p class="text-xs">We use some essential cookies to make this website work...</p>
+        <div class="mt-2">
+            <button class="bg-green-600 text-white px-4 py-2 mr-2">Accept additional cookies</button>
+            <button class="bg-gray-600 text-white px-4 py-2 mr-2">Reject additional cookies</button>
+            <a href="#" class="text-blue-600">View cookies</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-700 text-white p-8">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold">GOV.UK</h1>
+            <p class="text-2xl mt-2">The best place to find government services and information</p>
+            <div class="mt-4">
+                <input type="text" placeholder="Search" class="p-2 w-full md:w-1/3">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8">
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Popular on GOV.UK</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="#" class="text-blue-600">HMRC account: sign in or set up</a>
+                <a href="#" class="text-blue-600">Universal Credit account: sign in</a>
+                <a href="#" class="text-blue-600">Personal tax account: sign in or set up</a>
+                <!-- Add more links as needed -->
+            </div>
+        </section>
+
+        <section class="flex flex-wrap">
+            <div class="w-full md:w-2/3">
+                <h2 class="text-xl font-bold mb-4">Services and information</h2>
+                <ul class="list-disc pl-5">
+                    <li><a href="#" class="text-blue-600">Benefits</a></li>
+                    <li><a href="#" class="text-blue-600">Births, deaths, marriages and care</a></li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </div>
+            <div class="w-full md:w-1/3">
+                <h2 class="text-xl font-bold mb-4">Featured</h2>
+                <ul class="list-disc pl-5">
+                    <li><a href="#" class="text-blue-600">Find a job</a></li>
+                    <li><a href="#" class="text-blue-600">National Insurance</a></li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto">
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="font-bold">Services and Information</h3>
+                    <ul class="list-none">
+                        <li><a href="#" class="text-blue-400">Benefits</a></li>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold">Government activity</h3>
+                    <ul class="list-none">
+                        <li><a href="#" class="text-blue-400">Departments</a></li>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

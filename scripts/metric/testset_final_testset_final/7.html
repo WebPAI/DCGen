@@ -1,0 +1,299 @@
+<!DOCTYPE html> <html class=js lang=en-US style><!--
+ Page saved with SingleFile 
+ url: https://jquery.com 
+ saved date: Fri May 24 2024 01:25:21 GMT+0800 (中国标准时间)
+--><meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<title>jQuery</title>
+<meta name=author content="OpenJS Foundation - openjsf.org">
+<meta name=description content="jQuery: The Write Less, Do More, JavaScript Library">
+<meta name=viewport content="width=device-width">
+<style>:root{--sf-img-12: url("placeholder.png")}</style><style>/*! https://github.com/jquery/typesense-minibar 1.1.1 */.tsmb-form{--tsmb-size-edge:1px;--tsmb-size-highlight:2px;--tsmb-size-half:calc(var(--tsmb-size-sm)/2);--tsmb-size-input:calc(var(--tsmb-size-base)*1.2);--tsmb-color-focus-background:#fff;position:relative;max-width:100%;padding:0;color:var(--tsmb-color-base30)}.tsmb-form input[type=search]{box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none;color:inherit;background:var(--tsmb-color-base-background);padding:var(--tsmb-size-sm) var(--tsmb-size-sm) var(--tsmb-size-sm) calc(var(--tsmb-size-base) + var(--tsmb-size-sm) + var(--tsmb-size-sm));border:var(--tsmb-size-edge) solid var(--tsmb-color-base90);border-radius:var(--tsmb-size-radius);font-size:var(--tsmb-size-base);width:100%;line-height:var(--tsmb-size-input)}.tsmb-form input[type=search]::placeholder{color:var(--tsmb-color-base50);opacity:1}.tsmb-form:focus-within{color:var(--tsmb-color-focus30)}.tsmb-form:focus-within input[type=search]{background:var(--tsmb-color-focus-background)}.tsmb-form:focus-within input[type=search]::placeholder{color:var(--tsmb-color-focus50)}.tsmb-form input[type=search]::-webkit-search-decoration,.tsmb-form input[type=search]::-webkit-search-cancel-button,.tsmb-form input[type=search]::-webkit-search-results-button,.tsmb-form input[type=search]::-webkit-search-results-decoration{display:none}.tsmb-form::before{content:"";background:url(data:image/svg+xml,<svg\ xmlns=\'http://www.w3.org/2000/svg\'\ viewBox=\'654\ -372\ 1664\ 1664\'\ width=\'20\'\ height=\'20\'><path\ d=\'M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5\ C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5\ C1762.2,560.8,1806,455.3,1806,332z\ M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342\ c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332\ s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225\ S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z\'\/><\/svg>)0 50%/contain no-repeat;position:absolute;top:calc(var(--tsmb-size-sm) + var(--tsmb-size-edge));left:var(--tsmb-size-sm);width:var(--tsmb-size-base);height:var(--tsmb-size-input);opacity:0.5}.tsmb-form--slash input[type=search]{padding-right:calc(var(--tsmb-size-sm) + var(--tsmb-size-base) + var(--tsmb-size-base))}.tsmb-icon-close{box-sizing:border-box;position:absolute;top:calc(50% - var(--tsmb-size-base)/2);right:var(--tsmb-size-base);width:var(--tsmb-size-base);height:var(--tsmb-size-base);stroke:currentColor;border:1px solid currentColor;border-radius:50%;cursor:pointer}.tsmb-form--slash:not(.tsmb-form--open):not(:focus-within)::after{content:"/";display:inline-block;position:absolute;top:calc(50% - (var(--tsmb-size-input) + var(--tsmb-size-sm)/2)/2);right:var(--tsmb-size-sm);width:calc(var(--tsmb-size-input) + var(--tsmb-size-sm)/2);height:calc(var(--tsmb-size-input) + var(--tsmb-size-sm)/2);font-size:var(--tsmb-size-base);line-height:calc(var(--tsmb-size-input) + var(--tsmb-size-sm)/2);text-align:center;background:var(--tsmb-color-base-background);border:var(--tsmb-size-edge) solid var(--tsmb-color-base90);border-radius:var(--tsmb-size-radius);color:var(--tsmb-color-base90)}@media (max-width:480px){.tsmb-form{width:100%}.tsmb-form input[type=search]{border-radius:0}}@media (min-width:768px){.tsmb-form--slash::after{display:none}}/*! https://github.com/jquery/typesense-minibar 1.1.1 */</style>
+<style>/*! Copyright jQuery Foundation and other contributors
+ * Includes:
+ * - normalize.css v1.0.1 (MIT License, Copyright Nicolas Gallagher and Jonathan Neal)
+ * - Font Awesome v3.0.2 (MIT License, Font Awesome by Dave Gandy)
+ */*{box-sizing:border-box}aside,footer,header,nav,section{display:block}html{font-size:100%;-webkit-text-size-adjust:100%}html,button{font-family:sans-serif;color:#333}body{margin:0}::selection{background:#b4efff;text-shadow:none}.jquery-ui ::selection{background:#ffddb2}.jquery-mobile ::selection{background:#c9f2c8}@font-face{font-family:"FontAwesome";src:url()format("woff2");font-weight:normal;font-style:normal}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h2{font-size:1.5em;margin:0 0 0.5em}h3{margin:0 0 0.67em}h2,h3{font-weight:700;font-family:Cairo,"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif!important}p{margin:1em 0}pre,code{white-space:pre-wrap;word-wrap:break-word;font-size:13px;line-height:16px}code{padding:0 3px;background-color:rgba(0,0,0,0.08);border-radius:3px}pre code{background-color:transparent;white-space:pre;word-wrap:normal}ul{margin:0 0 1em}ul{padding:0}nav ul{list-style:none;list-style-image:none}img{vertical-align:middle}button,input{font-size:100%;margin:0;vertical-align:baseline}button{line-height:normal}button{-webkit-appearance:button;cursor:pointer}input[type="search"]{-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}table{border-collapse:collapse;border-spacing:0}#content table{margin:1em 2em}#content tbody tr:hover{background-color:#eee}#content td{padding:.5em}@font-face{font-family:Cairo;src:url()format("woff2");font-weight:normal}@font-face{font-family:Cairo;src:url()format("woff2");font-weight:700}[class^="icon-"]{font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;height:auto;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}[class^="icon-"]:before,[class*=" icon-"]:before{text-decoration:inherit;display:inline-block;speak:none}li [class^="icon-"]{text-align:center}.icon-comments:before{content:""}.icon-github:before{content:""}.icon-pencil:before{content:""}.icon-twitter:before{content:""}[class^="icon-"]::before,[class^="icon-"]::after,[class*=" icon-"]::before,[class*=" icon-"]::after{font-family:FontAwesome,"Helvetica Neue",Helvetica,Arial,sans-serif}body{-webkit-font-smoothing:antialiased;color:#333;font:15px/22.5px"Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif}#container{background:#0769ad;margin:0 auto;padding:0 20px}#content-wrapper{background-color:#fff;box-shadow:-3px 0 5px -3px rgba(1,1,1,0.87),3px 0 5px -3px rgba(1,1,1,0.87);padding:20px 0;border-top:1px solid #333;border-radius:0 0 10px 10px;position:relative}.constrain{max-width:1240px;margin:0 auto;padding:0 20px}#content{float:left}.content-full #content{width:100%}.content-full.full-width #content{padding-left:0;padding-right:0}#global-nav{background:linear-gradient(to bottom,transparent 92%,rgb(20,20,20)),linear-gradient(to bottom,rgb(75,75,75),#232323)}#global-nav nav{height:34px}#global-nav nav ul{text-align:left;display:inline;float:left;margin:0;list-style:none;border-right:1px solid rgba(255,255,255,0.0976562);border-left:1px solid rgba(0,0,0,0.347656)}#global-nav nav ul.links{float:right}#global-nav nav ul li{font:bold 13px/17px"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;display:inline-block;float:left;position:relative;top:1px;cursor:pointer;transition:all 0.2s;text-shadow:0 0 2px #000;border-left:1px solid rgba(255,255,255,0.0976562);border-right:1px solid rgba(0,0,0,0.347656)}#global-nav nav ul li:hover{background:#232323;color:#fff}#global-nav nav ul li a{color:#e6e6e6;font-weight:normal;font-style:normal;text-decoration:none;display:block;padding:8px 12px;white-space:nowrap}#global-nav nav ul.projects li.project{width:42px;padding:0;height:33px;text-indent:-9999px;background:url(placeholder.png)-6px 0;z-index:10}#global-nav nav ul.projects li.project a{display:block;height:33px}#global-nav nav ul.projects li.jquery-mobile{background-position:-107px 0}#global-nav nav ul.projects li.sizzlejs{background-position:-155px 0}#global-nav nav ul.projects li.qunitjs{background-position:-204px 0}.jquery #global-nav nav ul.projects li.jquery{background-position:0 bottom;width:52px;position:relative;margin-top:1px;border:none}.jquery #global-nav nav ul.projects{border-left:none}.jquery #global-nav nav ul.projects li.jquery-ui{border-left:none;background-position:-59px 0}#container,footer{border-top:1px solid #7acef4}#logo-events{clear:both;padding:25px 20px}h2.logo{float:left;margin:0;width:243px}h2.logo a{float:left;display:block;height:66px;overflow:hidden;text-indent:-1000px}.jquery h2.logo a{width:243px;background:url(placeholder.png)no-repeat}nav#main{background-color:rgba(0,0,0,0.18);border-radius:10px 10px 0 0;border-right:1px solid rgba(2,2,2,0.28);border-left:1px solid rgba(2,2,2,0.28);border-top:1px solid rgba(250,250,250,0.14);box-shadow:0 0 5px rgba(1,1,1,0.7)}nav#main ul{margin:0;float:left;width:70%;padding-top:10px;padding-bottom:10px}nav#main li{float:left;font:normal 700 16px Cairo,"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;margin-right:2px}nav#main li a{color:#fff;text-decoration:none;padding:0 10px;line-height:32px;display:block;border:1px solid transparent;text-shadow:0-1px 0 rgba(0,0,0,0.76)}nav#main li a:hover,nav#main li.current a{background:none;box-shadow:inset 0 0 5px rgba(0,0,0,0.4),rgba(255,255,255,0.1)0 1px 0;border-radius:4px;border:1px solid rgba(0,0,0,0.25);color:#fff;text-shadow:rgba(0,0,0,0.796875)0-1px 0,rgba(255,255,255,0.296875)0 0 10px}.searchform{float:right;margin:6px 0;width:30%}.searchform input{font-family:"Lucida Grande",Lucida,Verdana,sans-serif}.tsmb-form{--tsmb-size-radius:5px;--tsmb-size-base:12px;--tsmb-size-sm:0.8rem;--tsmb-color-base-background:var(--tsmb-color-primary50);--tsmb-color-base30:#fff;--tsmb-color-base50:var(--tsmb-color-primary90);--tsmb-color-base90:var(--tsmb-color-primary90);--tsmb-color-focus30:#666;--tsmb-color-focus50:#444;--tsmb-color-focus90:#ccc;--tsmb-color-primary30:#333;--tsmb-color-primary50:#0769ad;--tsmb-color-primary90:#b4efff}.tsmb-form:not(:focus-within)::before{filter:invert()}.tsmb-form input[type=search]{border-width:0}#content a{text-decoration:underline}#content a:hover{text-decoration:none}p{margin-bottom:15px;margin-top:0}#content ul{margin:0 0 20px 20px}#content ul li{padding:5px 0 5px 12px;margin-left:8px;line-height:20px}#content ul li::marker{content:"●";color:#ccc}#content h2{font-size:24px;line-height:24px;color:#333;margin-bottom:10px}#content h3{font-size:20px;line-height:20px;color:#666}#content h2.block{padding:10px 2%;background:#ececec;text-shadow:0 1px 0#ffffff}#banner-secondary{background-image:url(placeholder.png);margin:-20px -25px 15px;padding:20px}#banner-secondary p{color:#ccc;font:22px/26px"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;padding-left:15%;padding-right:15%}#banner-secondary a,#banner-secondary a:hover{color:#7acef4}.center-txt{text-align:center!important}#content a.button{color:#fff!important;text-shadow:0-1px 1px rgba(0,0,0,0.35);font:bold 16px/16px Cairo,"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;background-color:#d18f4f}a.button:hover,#content a.button:hover,.button:hover,input[type="submit"]:hover{border-color:#b24926;background-color:#cc8540}a.button:active,#content a.button:active,.button:active,input[type="submit"]:active{border-color:#b24926;background-color:#b24926}footer{background:#232323 linear-gradient(to bottom,rgba(0,0,0,.3),rgba(0,0,0,0)) top left/100px 15px repeat-x;margin-top:-20px;color:#aaa}footer.simple{padding-top:45px;padding-bottom:10px}footer a{color:#fff;text-decoration:none}footer h3{color:#777;letter-spacing:normal;text-transform:uppercase;text-shadow:#000 0 1px 0;border:solid 1px #000;text-rendering:optimizeLegibility;border-bottom:none;border-radius:4px 4px 0 0;position:relative;text-align:center;height:10px;margin-top:20px;font-size:16px}footer h3 span{display:inline-block;padding:3px 10px;position:relative;top:-0.8em;background:#232323;z-index:1}footer h3:after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border:solid 1px #333;border-bottom:none;border-radius:4px 4px 0 0}footer .legal{margin-top:1em;border-top:solid 1px #333;box-shadow:#000 0-1px 0;padding-top:10px;color:#777}.footer-site-links{float:right;width:58%;min-height:5em;text-align:right}footer p{margin:0 0 0.5em;font-size:11px;line-height:130%}footer p.copyright{margin-top:0;width:40%}footer .legal a{color:#aaa}footer .legal a:hover{color:#fff}footer a.wp-link:before,footer a.do-link:before{content:url(placeholder.png);display:inline-block;width:1.5em;height:1.5em;padding-right:0.5em;vertical-align:bottom;filter:invert(1)}footer a.do-link:before{content:url(placeholder.png)}.footer-site-links li{position:relative;background:none;width:auto;height:auto;line-height:20px;margin:0 0 10px 20px;font-size:13px}.footer-site-links li:first-child{margin-left:0}.footer-site-links li a{position:relative;color:#aaa;display:block;padding-left:30px;width:auto;line-height:inherit}.footer-site-links li a:before{position:absolute;font-size:1.5em;color:#4d4d4d;text-shadow:0-1px 0#000000;left:2px}.footer-site-links li:hover a,.footer-site-links li:hover a:before{color:#e6e6e6}.footer-site-links li{display:inline-block}footer ul li{list-style:none;padding:0;margin:0}footer .books li{float:left;width:30%;min-width:95px;margin-left:2.8%;margin-bottom:15px;line-height:130%;font-size:11px;text-align:center}footer .books li:first-child{margin-left:2%}footer .books li a img{display:block;border-radius:5px;border:solid 1px rgba(255,255,255,0.2);width:92px;height:114px;margin:0 auto 5px}footer .books li a:hover img{border-color:#fff}footer .books li a cite{display:block;font-style:normal;font-size:9px;line-height:1.5em;color:#aaa}@media only screen and (max-width:807px){#content-wrapper.row{min-width:0}}@media only screen and (max-width:767px){.content-full.full-width #content{padding-left:15px;padding-right:15px}#content{width:100%;float:none;clear:both}#banner-secondary{margin-left:-15px!important;margin-right:-15px!important}footer p.copyright,footer ul.footer-site-links{width:100%;min-height:auto}footer p.copyright,footer ul.footer-site-links,footer p{text-align:center;margin:0 0 10px 0}}@media only screen and (max-width:700px){#global-nav ul.projects{display:none}#global-nav nav ul.links{float:left}#global-nav nav ul.links li{font-size:12px}#logo-events h2.logo{float:none;margin-left:auto;margin-right:auto}nav#main .searchform{display:block;float:none;width:100%;margin:15px auto;clear:both}.searchform input[type=search]{border-width:1px}nav#main ul{width:auto!important;text-align:left!important;float:none;margin:0;padding:0}nav#main ul li,nav#main ul li a{display:block;text-align:left!important;float:left;margin-right:0;padding:0 4px 4px 0}nav#main li a:hover,nav#main li.current a{background:none;box-shadow:none;border-radius:4px;border:1px solid rgba(0,0,0,0.0)}nav#main li a{font-size:14px}.content-full.full-width #content{padding-left:10px;padding-right:10px}#banner-secondary{border-top-left-radius:9px;border-top-right-radius:9px;margin-left:-10px!important;margin-right:-10px!important}footer .books li{clear:both;margin-bottom:10px;float:none;margin-left:auto!important;margin-right:auto;text-align:center}}@media only screen and (max-width:480px){#global-nav{display:none}#container{border-top:none!important}.menu-top-container{display:flex;flex-flow:column}#menu-top{display:none}nav#main{padding:0;background:none;border:none;box-shadow:none}nav#main .searchform{display:block;float:none;width:100%;margin:15px auto}nav#main ul li,nav#main ul li a{float:none;padding:6px 0 6px 8px}.constrain,#container{padding-left:10px;padding-right:10px}.content-full.full-width #content{padding-left:0;padding-right:0}#content-wrapper{border-top-left-radius:10px;border-top-right-radius:10px;padding-left:25px;padding-right:25px}#content pre{margin-left:-25px;margin-right:-25px}#banner-secondary{margin-left:-25px!important;margin-right:-25px!important}}@media only screen and (-webkit-device-pixel-ratio:2){.jquery h2.logo a{background:url(placeholder.png)no-repeat;background-size:243px 66px}}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.row{width:1240px;max-width:100%;min-width:768px;margin:0 auto}.row .row{width:auto;max-width:none;min-width:0;margin:0-25px}.columns{float:left;min-height:1px;padding:0 25px;position:relative}.columns.centered{float:none;margin:0 auto}[class*="column"]+[class*="column"]:last-child{float:right}.row .four{width:33.33333%}.row .six{width:50%}.row .eight{width:66.66667%}.row .twelve{width:100%}.pull-four{right:33.33333%}.push-eight{left:66.66667%}img{max-width:100%}.row:before,.row:after{content:"";display:table}.row:after{clear:both}@media only screen and (max-width:767px){.row{width:auto;min-width:0;margin-left:0!important;margin-right:0!important}.columns{width:auto!important;float:none;padding-left:0!important;padding-right:0!important}.column:last-child,.columns:last-child{float:none}[class*="column"]+[class*="column"]:last-child{float:none}.column:before,.columns:before,.column:after,.columns:after{content:"";display:table}.column:after,.columns:after{clear:both}.push-eight{left:auto}.pull-four{right:auto}}pre,code{font-family:Consolas,Menlo,monospace!important;word-spacing:0}pre code{display:block;color:#333}pre .hljs-keyword{color:#333;font-weight:bold}pre .hljs-number{color:#099}pre .hljs-string{color:#d14}pre .hljs-attr{color:#008080}.syntaxhighlighter div,.syntaxhighlighter pre,.syntaxhighlighter code,.syntaxhighlighter table,.syntaxhighlighter table td,.syntaxhighlighter table tr,.syntaxhighlighter table tbody{border-radius:0 0 0 0!important;background:none!important;bottom:auto!important;float:none!important;height:auto!important;left:auto!important;line-height:1.1em!important;margin:0!important;outline:0!important;overflow:visible!important;padding:0!important;position:static!important;right:auto!important;text-align:left!important;top:auto!important;vertical-align:baseline!important;width:auto!important;box-sizing:content-box!important;font-family:Consolas,Menlo,monospace!important;font-weight:normal!important;font-style:normal!important;font-size:1em!important;min-height:auto!important}.syntaxhighlighter{width:100%!important;margin:1em 0 1em 0!important;padding:1em 0;position:relative!important;overflow:auto!important;font-size:1em!important;background:#eee}.syntaxhighlighter .line{white-space:pre!important}.syntaxhighlighter table{width:100%!important}.syntaxhighlighter table td.code{width:100%!important}.syntaxhighlighter table td.code .container{position:relative!important}.syntaxhighlighter table td.gutter .line{text-align:right!important;padding:0 0.5em 0 1em!important;user-select:none}.syntaxhighlighter table td.code .line{padding:0 0.5em!important}.syntaxhighlighter table td.gutter{border-right:2px solid #999}.syntaxhighlighter{border-radius:5px}#content .syntaxhighlighter tr{border-bottom:none}</style>
+<style>a{color:#b24926}#content a:hover{color:#333}#home-content{margin-bottom:15px}#banner-secondary a,#banner-secondary a:hover{color:#b3b3b3}#banner-secondary h3{color:#7acef4;margin-bottom:0.5em}#banner-secondary .features-box p{font-size:.8em;line-height:1em;padding:0}.feature-box-image{margin:0 auto 1em auto;width:120px;height:107px;overflow:hidden}.lightweight-footprint .feature-box-image{background:var(--sf-img-12)0 0 no-repeat}.css3-compliant .feature-box-image{background:var(--sf-img-12) -139px 0 no-repeat}.cross-browser .feature-box-image{background:var(--sf-img-12) -278px 0 no-repeat;transition:all 0.4s}.cross-browser .feature-box-image:hover{transition:all 0.7s;transform:rotate(6.28rad)}.download-options{margin-top:1em}#banner-secondary .download-options a{display:block}#banner-secondary .download-main .button{float:none;box-shadow:0 0 20px rgba(209,143,79,0.6);border-radius:0;border:none;transition:all 1s}#banner-secondary .download-main .button:hover{box-shadow:0 0 25px rgba(209,143,79,0.9)}#content #banner-secondary .download-main>a{display:block;padding:0 0 .5em 0;font-size:2em;width:100%;text-align:center;text-decoration:none;line-height:0.8em}#content #banner-secondary .download-main>a span{display:block;font-size:0.6em}#content #banner-secondary .download-main>a span.download{background:url(placeholder.png)0 0;width:44px;height:37px;position:relative;top:1em;display:inline-block;margin-right:0.5em}#content #banner-secondary .download-main .support-notice{font-size:12px}@media only screen and (max-width:767px){}</style>
+<meta name=robots content=max-image-preview:large>
+<link rel=https://api.w.org/ href=https://jquery.com/wp-json/><link rel=alternate type=application/json href=https://jquery.com/wp-json/wp/v2/pages/8><meta name=generator content="WordPress 6.5.3">
+<link rel=canonical href=https://jquery.com/>
+<link rel=alternate type=application/json+oembed href="https://jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjquery.com%2F">
+<link rel=alternate type=text/xml+oembed href="https://jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjquery.com%2F&amp;format=xml">
+<link rel=me href=https://social.lfx.dev/@jquery>
+<meta name=referrer content=no-referrer><link rel="shortcut icon" href="placeholder.png"><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' placeholder.png; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body class="jquery home page-template page-template-page-fullwidth page-template-page-fullwidth-php page page-id-8 page-slug-index single-author singular">
+<header>
+ <section id=global-nav>
+ <nav>
+ <div class=constrain>
+ <ul class=projects>
+ <li class="project jquery"><a href=https://jquery.com/ title=jQuery>jQuery</a></li>
+ <li class="project jquery-ui"><a href=https://jqueryui.com/ title="jQuery UI">jQuery UI</a></li>
+ <li class="project jquery-mobile"><a href=https://jquerymobile.com/ title="jQuery Mobile">jQuery Mobile</a></li>
+ <li class="project sizzlejs"><a href=https://sizzlejs.com/ title=Sizzle>Sizzle</a></li>
+ <li class="project qunitjs"><a href=https://qunitjs.com/ title=QUnit>QUnit</a></li>
+ </ul>
+ <ul class=links>
+ <li><a href=https://plugins.jquery.com/>Plugins</a></li>
+ <li class=dropdown><a href=https://contribute.jquery.org/>Contribute</a>
+ <ul class=sf-hidden>
+ 
+ 
+ 
+ 
+ 
+ 
+ </ul>
+ </li>
+ <li class=dropdown><a href=https://events.jquery.org/>Events</a>
+ <ul class="wide sf-hidden">
+ </ul>
+ </li>
+ <li class=dropdown><a href=https://jquery.com/support/>Support</a>
+ <ul class=sf-hidden>
+ 
+ 
+ 
+ 
+ </ul>
+ </li>
+ <li class=dropdown><a href=https://openjsf.org/>OpenJS Foundation</a>
+ <ul class=sf-hidden>
+ 
+ 
+ 
+ 
+ 
+ 
+ </ul>
+ </li>
+ </ul>
+ </div>
+ </nav>
+ </section>
+</header>
+<div id=container>
+ <div id=logo-events class="constrain clearfix">
+ <h2 class=logo><a href=https://jquery.com/ title=jQuery>jQuery</a></h2>
+ <aside id=broadcast class=sf-hidden></aside>
+ </div>
+ <nav id=main class="constrain clearfix">
+ <div class=menu-top-container>
+ <button hidden id=menu-trigger class="button menu-trigger sf-hidden" aria-expanded=false aria-haspopup=menu>Navigation</button>
+ <ul id=menu-top class=menu role=menu aria-labelledby=menu-trigger>
+<li class=menu-item><a href=https://jquery.com/download/>Download</a></li>
+<li class=menu-item><a href=https://api.jquery.com/>API Documentation</a></li>
+<li class=menu-item><a href=https://blog.jquery.com/>Blog</a></li>
+<li class=menu-item><a href=https://plugins.jquery.com/>Plugins</a></li>
+<li class=menu-item><a href=https://jquery.com/browser-support/>Browser Support</a></li>
+ </ul>
+</div>
+ <form role=search class="searchform tsmb-form tsmb-form--slash" action=https://jquery.com/ data-origin=https://typesense.jquery.com data-collection=jquery_com data-key=Zh8mMgohXECel9wjPwqT7lekLSG3OCgz data-foot=true data-group=true>
+ <input type=search name=s aria-label="Search jQuery" value placeholder=Search autocomplete=off><div role=listbox hidden class=sf-hidden></div>
+ <button type=submit class=visuallyhidden></button>
+<svg viewBox="0 0 12 12" width=20 height=20 aria-hidden=true class=tsmb-icon-close style=display:none><path d="M9 3L3 9M3 3L9 9"></path></svg></form>
+ </nav>
+ <div id=content-wrapper class="clearfix row">
+<div class="content-full full-width twelve columns">
+ <div id=content>
+ 
+ 
+<div id=banner-secondary class=row>
+ <div class="downloads-box four columns push-eight">
+ <div class=download-main>
+ <a href=https://jquery.com/download/ class="button large">
+ <span class=download></span>
+ Download jQuery
+ <span>v3.7.1</span>
+ <span class=support-notice>The 1.x and 2.x branches no longer receive patches.</span>
+ </a>
+ <div class=download-options>
+ <a href=https://github.com/jquery/jquery>View Source on GitHub →</a>
+ <a href=https://learn.jquery.com/about-jquery/how-jquery-works/>How jQuery Works →</a>
+ </div>
+ </div>
+ </div>
+ <div class="features-box row eight columns pull-four">
+ <div class="feature-box lightweight-footprint four columns center-txt">
+ <div class=feature-box-image></div>
+ <h3>Lightweight Footprint</h3>
+ <p>Only 30kB minified and gzipped. Can also be included as an AMD module</p>
+ </div>
+ <div class="feature-box css3-compliant four columns center-txt">
+ <div class=feature-box-image></div>
+ <h3>CSS3 Compliant</h3>
+ <p>Supports CSS3 selectors to find elements as well as in style property manipulation</p>
+ </div>
+ <div class="feature-box cross-browser four columns center-txt">
+ <div class=feature-box-image></div>
+ <h3>Cross-Browser</h3>
+ <p><a href=https://jquery.com/browser-support/>Chrome, Edge, Firefox, IE, Safari, Android, iOS, and more</a></p>
+ </div>
+ </div>
+</div>
+<div id=home-content class="clearfix row">
+ <section class="eight columns">
+ <h2 class=block>What is jQuery?</h2>
+ <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes
+ things like HTML document traversal and manipulation, event handling,
+ animation, and Ajax much simpler with an easy-to-use API that works across
+ a multitude of browsers. With a combination of versatility and
+ extensibility, jQuery has changed the way that millions of people write
+ JavaScript.</p>
+ </section>
+ <aside class="four columns">
+ <h2 class=block>Resources</h2>
+ <ul>
+ <li><a href=https://api.jquery.com/>jQuery Core API Documentation</a></li>
+ <li><a href=https://learn.jquery.com/>jQuery Learning Center</a></li>
+ <li><a href=https://blog.jquery.com/>jQuery Blog</a></li>
+ <li><a href=https://contribute.jquery.com/>Contribute to jQuery</a></li>
+ <li><a href=https://github.com/jquery/jquery/issues>Browse or Submit jQuery Bugs</a></li>
+ </ul>
+ </aside>
+</div>
+<section>
+ <h2 class=block>A Brief Look</h2>
+ <h3>DOM Traversal and Manipulation</h3>
+ <p>Get the <code>&lt;button&gt;</code> element with the class 'continue' and change its HTML to 'Next Step...'</p>
+ <div class="syntaxhighlighter javascript">
+ <table>
+ <tbody>
+ <tr>
+ 
+ <td class=gutter>
+ 
+ <div class="line n1">1</div>
+ 
+ </td>
+ 
+ <td class=code>
+ <pre><div class=container><div class=line><code>$( <span class=hljs-string>"button.continue"</span> ).html( <span class=hljs-string>"Next Step..."</span> )</code></div></div></pre>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+</div>
+ <h3>Event Handling</h3>
+ <p>Show the <code>#banner-message</code> element that is hidden with
+ <code>display:none</code> in its CSS when any button in <code>#button-container</code> is
+ clicked.</p>
+ <div class="syntaxhighlighter javascript">
+ <table>
+ <tbody>
+ <tr>
+ 
+ <td class=gutter>
+ 
+ <div class="line n1">1</div>
+ 
+ <div class="line n2">2</div>
+ 
+ <div class="line n3">3</div>
+ 
+ <div class="line n4">4</div>
+ 
+ </td>
+ 
+ <td class=code>
+ <pre><div class=container><div class=line><code><span class=hljs-keyword>var</span> hiddenBox = $( <span class=hljs-string>"#banner-message"</span> );</code></div></div><div class=container><div class=line><code>$( <span class=hljs-string>"#button-container button"</span> ).on( <span class=hljs-string>"click"</span>, <span class=hljs-function><span class=hljs-keyword>function</span>(<span class=hljs-params> event </span>) </span>{</code></div></div><div class=container><div class=line><code>  hiddenBox.show();</code></div></div><div class=container><div class=line><code>});</code></div></div></pre>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+</div>
+ <h3>Ajax</h3>
+ <p>Call a local script on the server <code>/api/getWeather</code>
+ with the query parameter <code>zipcode=97201</code>
+ and replace the element <code>#weather-temp</code>'s html with the returned text.</p>
+ <div class="syntaxhighlighter javascript">
+ <table>
+ <tbody>
+ <tr>
+ 
+ <td class=gutter>
+ 
+ <div class="line n1">1</div>
+ 
+ <div class="line n2">2</div>
+ 
+ <div class="line n3">3</div>
+ 
+ <div class="line n4">4</div>
+ 
+ <div class="line n5">5</div>
+ 
+ <div class="line n6">6</div>
+ 
+ <div class="line n7">7</div>
+ 
+ <div class="line n8">8</div>
+ 
+ <div class="line n9">9</div>
+ 
+ </td>
+ 
+ <td class=code>
+ <pre><div class=container><div class=line><code>$.ajax({</code></div></div><div class=container><div class=line><code>  <span class=hljs-attr>url</span>: <span class=hljs-string>"/api/getWeather"</span>,</code></div></div><div class=container><div class=line><code>  <span class=hljs-attr>data</span>: {</code></div></div><div class=container><div class=line><code>    <span class=hljs-attr>zipcode</span>: <span class=hljs-number>97201</span></code></div></div><div class=container><div class=line><code>  },</code></div></div><div class=container><div class=line><code>  <span class=hljs-attr>success</span>: <span class=hljs-function><span class=hljs-keyword>function</span>(<span class=hljs-params> result </span>) </span>{</code></div></div><div class=container><div class=line><code>    $( <span class=hljs-string>"#weather-temp"</span> ).html( <span class=hljs-string>"&lt;strong&gt;"</span> + result + <span class=hljs-string>"&lt;/strong&gt; degrees"</span> );</code></div></div><div class=container><div class=line><code>  }</code></div></div><div class=container><div class=line><code>});</code></div></div></pre>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+</div>
+</section>
+<section>
+ <h2 class=block>Related Projects</h2>
+ <h3><a href=https://jqueryui.com/>jQuery UI</a></h3>
+ <p>This project is in maintenance-only mode. <a href=https://blog.jquery.com/2021/10/07/jquery-maintainers-update-and-transition-jquery-ui-as-part-of-overall-modernization-efforts/>Learn more</a>.</p>
+ <h3><a href=https://jquerymobile.com/>jQuery Mobile</a></h3>
+ <p>This project is deprecated. <a href=https://blog.jqueryui.com/2021/10/jquery-maintainers-continue-modernization-initiative-with-deprecation-of-jquery-mobile/>Learn more</a>.</p>
+</section>	</div>
+</div>
+ </div>
+</div>
+<footer class="clearfix simple">
+ <div class=constrain>
+ <div class=row>
+ <div class="six columns centered">
+ <h3><span>Books</span></h3>
+ <ul class=books>
+ <li>
+ <a href=https://www.packtpub.com/web-development/learning-jquery-fourth-edition>
+ <img src="placeholder.png" alt="Learning jQuery 4th Edition by Karl Swedberg and Jonathan Chaffer" width=92 height=114 loading=lazy>
+ Learning jQuery Fourth Edition
+ <cite>Karl Swedberg and Jonathan Chaffer</cite>
+ </a>
+ </li>
+ <li>
+ <a href=https://www.manning.com/books/jquery-in-action-third-edition>
+ <img src="placeholder.png" alt="jQuery in Action by Bear Bibeault, Yehuda Katz, and Aurelio De Rosa" width=92 height=114 loading=lazy>
+ jQuery in Action
+ <cite>Bear Bibeault, Yehuda Katz, and Aurelio De Rosa</cite>
+ </a>
+ </li>
+ <li>
+ <a href=https://www.syncfusion.com/ebooks/jquery>
+ <img src="placeholder.png" alt="jQuery Succinctly by Cody Lindley" width=92 height=114 loading=lazy>
+ jQuery Succinctly
+ <cite>Cody Lindley</cite>
+ </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ 
+<div id=legal class=legal>
+ <ul class=footer-site-links>
+ <li><a class=icon-pencil href=https://learn.jquery.com/>Learning Center</a></li>
+ <li><a class=icon-comments href=https://jquery.com/support/>Chat</a></li>
+ <li><a class=icon-twitter href=https://twitter.com/jquery>Twitter</a></li>
+ <li><a class=icon-github href=https://github.com/jquery>GitHub</a></li>
+ </ul>
+ <p class=copyright>
+ Copyright 2024 <a href=https://openjsf.org/>OpenJS Foundation</a> and jQuery contributors. All rights reserved. See <a href=https://jquery.com/license/>jQuery License</a> for more information. The <a href=https://openjsf.org/>OpenJS Foundation</a> has registered trademarks and uses trademarks. For a list of trademarks of the <a href=https://openjsf.org/>OpenJS Foundation</a>, please see our <a href=https://trademark-policy.openjsf.org/>Trademark Policy</a> and <a href=https://trademark-list.openjsf.org/>Trademark List</a>. Trademarks and logos not indicated on the <a href=https://trademark-list.openjsf.org/>list of OpenJS Foundation trademarks</a> are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them. OpenJS Foundation <a href=https://terms-of-use.openjsf.org/>Terms of Use</a>, <a href=https://privacy-policy.openjsf.org/>Privacy</a>, and <a href=https://www.linuxfoundation.org/cookies>Cookie</a> Policies also apply.
+ </p>
+ <p><a href=https://www.digitalocean.com/ class=do-link>Web hosting by Digital Ocean</a> | <a href=https://www.fastly.com/>CDN by Fastly</a> | <a href=https://wordpress.org/ class=wp-link>Powered by WordPress</a></p>
+</div>
+ </div>
+</footer>

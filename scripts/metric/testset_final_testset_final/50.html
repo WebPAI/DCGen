@@ -1,0 +1,523 @@
+<!DOCTYPE html> <html dir=ltr lang=en-US style><!--
+ Page saved with SingleFile 
+ url: https://lencr.org 
+ saved date: Thu May 23 2024 22:58:23 GMT+0800 (中国标准时间)
+--><meta charset=utf-8>
+<meta name=viewport content="width=device-width initial-scale=1">
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<title>lencr.org - Let's Encrypt</title>
+<meta name=description content="What&amp;rsquo;s lencr.org? lencr.org is a domain name owned by Let&amp;rsquo;s Encrypt. We use it to host data that is referenced inside the certificates we issue.
+Why is my computer fetching this data? Is it malicious? No, the data on lencr.org is never malicious. When a device connects to lencr.org, it&amp;rsquo;s because client software on that device (like a web browser or an app) connected to another site, saw a Let&amp;rsquo;s Encrypt certificate, and is trying to verify that it&amp;rsquo;s valid.">
+<meta name=twitter:card content=summary>
+<meta name=twitter:site content=@letsencrypt>
+<meta name=twitter:title content=lencr.org>
+<meta name=twitter:url content=https://letsencrypt.org/docs/lencr.org/>
+<meta name=twitter:description content="What&amp;rsquo;s lencr.org? lencr.org is a domain name owned by Let&amp;rsquo;s Encrypt. We use it to host data that is referenced inside the certificates we issue.
+Why is my computer fetching this data? Is it malicious? No, the data on lencr.org is never malicious. When a device connects to lencr.org, it&amp;rsquo;s because client software on that device (like a web browser or an app) connected to another site, saw a Let&amp;rsquo;s Encrypt certificate, and is trying to verify that it&amp;rsquo;s valid.">
+<meta name=twitter:image:src content=https://letsencrypt.org/images/le-logo-twitter-noalpha.png>
+<meta name=og:image content=https://letsencrypt.org/images/LetsEncrypt-SocialShare.png>
+<style>:root{--sf-img-15: url("placeholder.png")}</style><style>.inline-icon{height:1.5em;width:1.5em}@font-face{font-family:open sans;src:url()format("woff");font-weight:300;font-style:normal}@font-face{font-family:open sans;src:url()format("woff");font-weight:400;font-style:normal}@font-face{font-family:open sans;src:url()format("woff");font-weight:700;font-style:normal}/*!Pure v1.0.1
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/pure-css/pure/blob/master/LICENSE.md*//*!normalize.css v^3.0 | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal*//*!normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css*/html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}footer,header,nav{display:block}a{background-color:transparent}a:active,a:hover{outline:0}strong{font-weight:700}h1{font-size:2em}img{border:0}code{font-family:monospace,monospace}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){}@media only screen and (max-width:480px){}.pure-menu{-webkit-box-sizing:border-box;box-sizing:border-box}.pure-menu-item,.pure-menu-list{position:relative}.pure-menu-list{list-style:none;margin:0;padding:0}.pure-menu-item{padding:0;margin:0;height:100%}.pure-menu-link{display:block;text-decoration:none;white-space:nowrap}.pure-menu-horizontal{width:100%;white-space:nowrap}.pure-menu-horizontal .pure-menu-list{display:inline-block}.pure-menu-horizontal .pure-menu-item{display:inline-block;zoom:1;vertical-align:middle}.pure-menu-has-children>.pure-menu-link:after{padding-left:.5em;content:"▸";font-size:small}.pure-menu-horizontal .pure-menu-has-children>.pure-menu-link:after{content:"▾"}.pure-menu-link{padding:.5em 1em}.pure-menu-active>.pure-menu-link,.pure-menu-link:focus,.pure-menu-link:hover{background-color:#eee}/*!Pure v1.0.1
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/pure-css/pure/blob/master/LICENSE.md*/@media screen and (min-width:35.5em){}@media screen and (min-width:48em){}@media screen and (min-width:64em){}@media screen and (min-width:80em){}body,h1,h6,p,ul{margin:0;padding:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}body{font-family:open sans,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:400;color:#000;background-color:#fdfdfd;-webkit-text-size-adjust:100%}h1,p,ul{margin-bottom:15px}img{max-width:100%;vertical-align:middle}ul{margin-left:30px}h1{font-weight:300}@media screen and (max-width:730px){h1{font-size:1.4em;margin-top:30px}}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#000;text-decoration:underline}code{direction:ltr;font-size:15px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}.wrapper,.hero.slim div.container{max-width:-webkit-calc(1000px - (30px*2));max-width:calc(1000px - (30px*2));margin-right:auto;margin-left:auto;padding-right:30px;padding-left:30px}@media screen and (max-width:800px){.wrapper,.hero.slim div.container{max-width:-webkit-calc(800px - (30px));max-width:calc(800px - (30px));padding-right:15px;padding-left:15px}}.footer-col-wrapper:after,.wrapper:after,.hero.slim div.container:after{content:"";display:table;clear:both}#skiplink{position:absolute;clip:rect(1px 1px 1px 1px);overflow:hidden;height:1px}#skiplink:focus{position:static;clip:auto;overflow:visible;height:auto}.site-header{position:relative}.site-title{margin-left:0;padding-left:0;letter-spacing:-1px;float:left}.site-title img{max-width:250px;margin-bottom:14px;margin-top:14px}@media screen and (max-width:730px){.site-title img{max-width:200px}}.site-title,.site-title:visited{color:#424242}@media screen and (max-width:730px){}@media screen and (max-width:730px){}@media screen and (max-width:730px){}@media screen and (max-width:730px){}@media screen and (max-width:730px){}.hero.slim{padding-top:25px;padding-bottom:18px;text-align:center;background:#e1dcd2 var(--sf-img-15) no-repeat 50%;background-size:cover}.hero.slim div.container{text-align:left;width:90%;margin:0 auto}.hero.slim div.container h1{font-weight:400}@media screen and (max-width:730px){.hero.slim div.container{max-width:90%;border-radius:0}}.hero.slim h1{margin-bottom:10px;font-size:46px;display:inline-block;width:auto;background-color:rgba(254,254,254,.5);border-radius:8px;padding:10px 20px}@media screen and (max-width:730px){.hero.slim h1{font-size:30px;margin-top:10px}}@media screen and (max-width:730px){}@media screen and (max-width:730px){}.site-footer{border-top:1px solid #e8e8e8;padding-top:30px}.social-media-list{list-style:none;margin-left:0}.social-media-list a{display:flex;align-items:center;gap:4px}.social-media-list a:hover{text-decoration:none}.social-media-list a:hover span{text-decoration:underline}.social-media-list i{color:#828282;vertical-align:middle}.footer-col-wrapper{font-size:15px;color:#000;margin-left:-15px}.footer-col{float:left;margin-bottom:15px;padding-left:15px}.footer-col-1{width:-webkit-calc(25% - (45px/3));width:calc(25% - (45px/3))}.footer-col-2{width:-webkit-calc(40% - (45px/3));width:calc(40% - (45px/3))}.footer-col-3{width:-webkit-calc(33.3% - (45px/3));width:calc(33.3% - (45px/3))}.footer-newsletter-col h6{font-size:14px;line-height:1.2;font-weight:700;margin-bottom:0}@media screen and (max-width:730px){.footer-newsletter-col{margin-top:40px}}@media screen and (max-width:800px){.footer-col-1,.footer-col-2,.footer-col-3{width:-webkit-calc(33.3% - (45px/3));width:calc(33.3% - (45px/3))}}@media screen and (max-width:730px){.footer-col{float:none;width:-webkit-calc(100% - (45px/3));width:calc(100% - (45px/3))}}.page-content{padding-top:30px}@media screen and (max-width:730px){}@media screen and (max-width:800px){}@media screen and (max-width:800px){}@media screen and (max-width:800px){}@media screen and (max-width:800px){}@media screen and (max-width:730px){}@media screen and (max-width:730px){}@media screen and (max-width:599.9px){}.site-nav{float:right;margin-top:29px}@media screen and (max-width:1050px){.site-nav{clear:left;float:left;margin-top:0}.site-nav .pure-menu-horizontal>.pure-menu-list>.pure-menu-item:first-child>a.pure-menu-link{padding-left:0}}.site-nav .pure-menu-horizontal>.pure-menu-list>.pure-menu-item:last-child>a.pure-menu-link{padding-right:0}.pure-menu-active>.pure-menu-link,.pure-menu-link:hover,.pure-menu-link:focus{background-color:transparent}a.pure-menu-link:hover{text-decoration:none}.pure-menu-link{color:#144b92}.pure-menu-link:visited{color:#144b92}@media screen and (max-width:730px){.site-nav{text-align:left;position:relative;margin-bottom:10px;right:0;width:100%;margin-top:0;top:0}.pure-menu{clear:both;display:none;position:relative;padding-bottom:20px}}.hero{margin-bottom:15px;padding:10px 40px}@keyframes waiting{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@media (max-width:640px){}</style>
+<style>/*!
+ * Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
+ */.fab{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}.fab{font-family:"Font Awesome 6 Brands"}@media (prefers-reduced-motion:reduce){}@-webkit-keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@-webkit-keyframes fa-bounce{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}10%{-webkit-transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0);transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{-webkit-transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em));transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{-webkit-transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0);transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{-webkit-transform:scale(1) translateY(var(--fa-bounce-rebound,-.125em));transform:scale(1) translateY(var(--fa-bounce-rebound,-.125em))}64%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}to{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}}@keyframes fa-bounce{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}10%{-webkit-transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0);transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{-webkit-transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em));transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{-webkit-transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0);transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{-webkit-transform:scale(1) translateY(var(--fa-bounce-rebound,-.125em));transform:scale(1) translateY(var(--fa-bounce-rebound,-.125em))}64%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}to{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0)}}@-webkit-keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@-webkit-keyframes fa-beat-fade{0%,to{opacity:var(--fa-beat-fade-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(var(--fa-beat-fade-scale,1.125));transform:scale(var(--fa-beat-fade-scale,1.125))}}@keyframes fa-beat-fade{0%,to{opacity:var(--fa-beat-fade-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(var(--fa-beat-fade-scale,1.125));transform:scale(var(--fa-beat-fade-scale,1.125))}}@-webkit-keyframes fa-flip{50%{-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-flip{50%{-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@-webkit-keyframes fa-shake{0%{-webkit-transform:rotate(-15deg);transform:rotate(-15deg)}4%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}8%,24%{-webkit-transform:rotate(-18deg);transform:rotate(-18deg)}12%,28%{-webkit-transform:rotate(18deg);transform:rotate(18deg)}16%{-webkit-transform:rotate(-22deg);transform:rotate(-22deg)}20%{-webkit-transform:rotate(22deg);transform:rotate(22deg)}32%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}36%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}40%,to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}}@keyframes fa-shake{0%{-webkit-transform:rotate(-15deg);transform:rotate(-15deg)}4%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}8%,24%{-webkit-transform:rotate(-18deg);transform:rotate(-18deg)}12%,28%{-webkit-transform:rotate(18deg);transform:rotate(18deg)}16%{-webkit-transform:rotate(-22deg);transform:rotate(-22deg)}20%{-webkit-transform:rotate(22deg);transform:rotate(22deg)}32%{-webkit-transform:rotate(-12deg);transform:rotate(-12deg)}36%{-webkit-transform:rotate(12deg);transform:rotate(12deg)}40%,to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}:host,:root{--fa-style-family-brands:"Font Awesome 6 Brands";--fa-font-brands:normal 400 1em/1"Font Awesome 6 Brands"}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;src:url()format("woff2")}.fab{font-weight:400}.fa-x-twitter:before{content:""}.fa-github:before{content:""}.fa-mastodon:before{content:""}:host,:root{--fa-font-regular:normal 400 1em/1"Font Awesome 6 Free"}:host,:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1"Font Awesome 6 Free"}</style>
+<link rel=canonical href=https://letsencrypt.org/docs/lencr.org/>
+<link rel=alternate href=https://letsencrypt.org/feed.xml type=application/rss+xml title="Let's Encrypt Blog Feed">
+<meta name=referrer content=no-referrer><link type=image/x-icon rel="shortcut icon" href="placeholder.png"><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' placeholder.png; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+ 
+ <body>
+ 
+<header class=site-header>
+ <a id=skiplink href=https://letsencrypt.org/docs/lencr.org/#main-content>Skip navigation links</a>
+ <div class=wrapper>
+ <a class=site-title href=https://letsencrypt.org/><img src="placeholder.png" alt="Let's Encrypt"></a>
+ <span id=menuIcon class=sf-hidden>
+ 
+ </span>
+ <nav class=site-nav id=menu>
+ <div class="pure-menu pure-menu-horizontal custom-can-transform">
+ <ul class=pure-menu-list role=menubar>
+ 
+ <li class=pure-menu-item role=none>
+ <a href=https://letsencrypt.org/docs/ class=pure-menu-link tabindex=0 role=menuitem>Documentation</a>
+ 
+ </li>
+ 
+ <li class=pure-menu-item role=none>
+ <a href=https://community.letsencrypt.org/ class=pure-menu-link tabindex=0 role=menuitem>Get Help</a>
+ 
+ </li>
+ 
+ <li class="pure-menu-item pure-menu-has-children" role=none>
+ <a href=https://letsencrypt.org/docs/lencr.org/# class=pure-menu-link tabindex=0 role=menuitem aria-haspopup=true aria-expanded=false>Donate</a>
+ 
+ <ul class="pure-menu-children sf-hidden" role=menu aria-label=Donate>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </ul>
+ 
+ </li>
+ 
+ <li class="pure-menu-item pure-menu-has-children" role=none>
+ <a href=https://letsencrypt.org/docs/lencr.org/# class=pure-menu-link tabindex=0 role=menuitem aria-haspopup=true aria-expanded=false>About Us</a>
+ 
+ <ul class="pure-menu-children sf-hidden" role=menu aria-label="About Us">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </ul>
+ 
+ </li>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li class="pure-menu-item pure-menu-has-children" role=none>
+ <a href=https://letsencrypt.org/docs/lencr.org/# class=pure-menu-link tabindex=0 role=menuitem aria-haspopup=true aria-expanded=false>Languages <img src="placeholder.png" class=inline-icon alt aria-hidden=true></a>
+ <ul class="pure-menu-children menu-for-languages sf-hidden" role=menu aria-label="Languages ">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </ul>
+ </li>
+ 
+ </ul>
+ </div>
+ </nav>
+ </div>
+</header>
+<div id=main-content></div>
+ 
+<div class="hero slim" style=background-image:var(--sf-img-15)>
+<div class=container>
+ <h1>lencr.org</h1>
+</div>
+</div>
+<div class=page-content>
+ <div class=wrapper>
+ 
+ 
+ 
+ <p data-langswitch=el style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=th style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <p data-langswitch=da style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=de-DE style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <p data-langswitch=fr-FR style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=he style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=hu style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ <p data-langswitch=it-IT style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=ja style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=ko-KR style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ <p data-langswitch=ru-RU style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ <p data-langswitch=si style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <p data-langswitch=uk-UA style=display:none>
+ 
+ </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ <p data-langswitch=zh-Hans-CN style=display:block>
+ <a lang=zh-Hans-CN hreflang=zh-Hans-CN href=https://letsencrypt.org/zh-cn/docs/lencr.org/>
+ 
+ 使用简体中文阅读本网页。
+ 
+ </a>
+ </p>
+ 
+ 
+ 
+ 
+ 
+<p>
+ 
+ Last updated: <time datetime=2022-09-30>Sep 30, 2022</time>
+ | <a href=https://letsencrypt.org/docs>See all Documentation</a>
+</p>
+<h1 id=what-s-lencr-org>What’s <code>lencr.org</code>?<a class="autoanchor fas fa-link sf-hidden" href=https://letsencrypt.org/docs/lencr.org/#what-s-lencr-org></a></h1>
+<p><code>lencr.org</code> is a domain name owned by Let’s Encrypt. We use it to host data
+that is referenced inside the certificates we issue.</p>
+<h1 id=why-is-my-computer-fetching-this-data-is-it-malicious>Why is my computer fetching this data? Is it malicious?<a class="autoanchor fas fa-link sf-hidden" href=https://letsencrypt.org/docs/lencr.org/#why-is-my-computer-fetching-this-data-is-it-malicious></a></h1>
+<p>No, the data on <code>lencr.org</code> is never malicious. When a device connects to
+<code>lencr.org</code>, it’s because client software on that device (like a web browser or
+an app) connected to another site, saw a Let’s Encrypt certificate, and is
+trying to verify that it’s valid. This is routine for many clients.</p>
+<p>We can’t speak to whether the <em>other site</em> being connected to is malicious. If
+you’re investigating network activity that seems unusual, then you may want to
+focus on the connection that started just before the connection to <code>lencr.org</code>.</p>
+<p>The pattern of clients' connections to <code>lencr.org</code> might look unusual or
+intermittent. Clients might never retrieve this data; only retrieve subsets of
+it; or “cache” some data for efficiency, so they’ll only access it sometimes
+(the first time they need it, and when the data may have expired).</p>
+<h1 id=what-exactly-is-this-data-for>What exactly is this data for?<a class="autoanchor fas fa-link sf-hidden" href=https://letsencrypt.org/docs/lencr.org/#what-exactly-is-this-data-for></a></h1>
+<p>When client software (like a web browser or an app) connects to a site, and that
+site presents a certificate, the client should verify that the certificate is
+authentic and valid. This data helps clients do that in several ways.</p>
+<ul>
+<li>
+<p>Under <code>o.lencr.org</code>, we provide Online Certificate Status Protocol (OCSP) data.
+A client may use this data to confirm whether an individual unexpired
+certificate that we issued is still valid, or was revoked. (This is only for
+“end-entity” or “leaf” certificates, which we’ve issued to subscribers from one
+of our intermediate certificates.)</p>
+</li>
+<li>
+<p>Under <code>c.lencr.org</code>, we provide Certificate Revocation Lists (CRLs) listing
+all the unexpired certificates that we issued and later revoked.</p>
+</li>
+<li>
+<p>Under <code>i.lencr.org</code>, we provide copies of our intermediate “issuer”
+certificates, which are either signed by one of our root certificates or
+“cross-signed” by another Certificate Authority (CA). A client may use this
+data to confirm the “chain of trust” from the end-entity certificate it’s
+verifying, via one or more intermediate steps, to a root CA certificate that it
+recognizes and trusts.</p>
+</li>
+</ul>
+<h1 id=why-are-connections-to-o-lencr-org-over-insecure-http>Why are connections to <code>o.lencr.org</code> over insecure HTTP?<a class="autoanchor fas fa-link sf-hidden" href=https://letsencrypt.org/docs/lencr.org/#why-are-connections-to-o-lencr-org-over-insecure-http></a></h1>
+<p>OCSP responses are always served over HTTP. If they were served over HTTPS,
+there would be an “infinite loop” problem: in order to verify the OCSP server’s
+certificate, the client would have to use OCSP.</p>
+<p>The OCSP response itself is timestamped and cryptographically signed, so the
+anti-tampering properties of TLS aren’t needed in this case.</p>
+<h1 id=why-lencr-org>Why “<code>lencr.org</code>”?<a class="autoanchor fas fa-link sf-hidden" href=https://letsencrypt.org/docs/lencr.org/#why-lencr-org></a></h1>
+<p>We used to use longer URLs like <code>http://ocsp.int-x3.letsencrypt.org/</code>. However,
+when we issued our <a href=https://letsencrypt.org/2020/09/17/new-root-and-intermediates>new root and intermediate certificates</a>, we wanted to
+make them as small as possible. Every HTTPS connection on the web (billions per
+day) has to send a copy of a certificate, so every byte matters. We chose
+<code>lencr.org</code> because of its similarity with our name: <strong>L</strong>et’s <strong>ENCR</strong>ypt. We
+pronounce it much like the fictional region of <a href=https://wiki.lspace.org/Lancre>Lancre</a> in Terry Pratchett’s
+<em>Discworld</em> novels.</p>
+</div>
+</div>
+ 
+<footer class=site-footer>
+ <div class=wrapper>
+ <div class=footer-col-wrapper>
+ <div class="footer-col footer-col-2">
+ <p>Let's Encrypt is a free, automated, and open certificate authority brought to you by the nonprofit <a href=https://www.abetterinternet.org/>Internet Security Research Group (ISRG)</a>. Read all about our nonprofit work this year in our <a href=https://www.abetterinternet.org/annual-reports/>2023 Annual Report</a>.
+</p>
+ <p>
+ <span itemscope itemtype=http://schema.org/PostalAddress>
+ <span itemprop=streetAddress>548 Market St, PMB 77519</span>,
+ <span itemprop=addressLocality>San Francisco</span>,
+ <span itemprop=addressRegion>CA</span>
+ <span itemprop=postalCode>94104-5401</span>,
+ <span itemprop=addressCountry>USA</span>
+ </span>
+ </p>
+ <p>Send all mail or inquiries to:</p>
+ <p>
+ <span itemscope itemtype=http://schema.org/PostalAddress>
+ <span itemprop=streetAddress>PO Box 18666</span>,
+ <span itemprop=addressLocality>Minneapolis</span>,
+ <span itemprop=addressRegion>MN</span>
+ <span itemprop=postalCode>55418-0666</span>,
+ <span itemprop=addressCountry>USA</span>
+ </span>
+ </p>
+ </div>
+ <div class="footer-col footer-col-1">
+ <ul class=social-media-list>
+ 
+ <li>
+ <a href=https://github.com/letsencrypt>
+ <i class="fab fa-github" aria-hidden=true></i>
+ <span class=username>GitHub</span>
+ </a>
+ </li>
+ 
+ 
+ <li>
+ <a href=https://x.com/letsencrypt>
+ <i class="fab fa-brands fa-x-twitter" aria-hidden=true></i>
+ <span class=username>X</span>
+ </a>
+ </li>
+ 
+ 
+ <li>
+ <a rel=me href=https://infosec.exchange/@letsencrypt>
+ <i class="fab fa-mastodon" aria-hidden=true></i>
+ <span class=username>Mastodon</span>
+ </a>
+ </li>
+ 
+ </ul>
+ View our <a href=https://letsencrypt.org/privacy/>privacy policy</a>.<br>
+View our <a href=https://www.abetterinternet.org/trademarks>trademark policy</a>.
+ </div>
+ <div class="footer-col footer-newsletter-col footer-col-3">
+ <h6>Subscribe to our Newsletter</h6>
+ <iframe height=200 style=width:100%;border:0 sandbox="allow-popups allow-top-navigation allow-top-navigation-by-user-activation" srcdoc="<!DOCTYPE html> <html><meta charset=utf-8>
+<meta name=description content>
+<title></title>
+<meta name=referrer content=no-referrer><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content=&quot;default-src 'none'; font-src 'self' data:; img-src 'self' placeholder.png; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;&quot;><style>img[src=&quot;data:,&quot;],source[src=&quot;data:,&quot;]{display:none!important}</style>"></iframe>
+ </div>
+ </div>
+ </div>
+</footer>
+ 

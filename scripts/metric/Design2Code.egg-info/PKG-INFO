@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: Design2Code
+Version: 0.1
+Author: Chenglei Si
+Author-email: clsi@stanford.edu
+License: MIT License
+Requires-Dist: opencv-python==4.10.0.84
+Requires-Dist: playwright==1.47.0
+Requires-Dist: beautifulsoup4==4.12.2
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: open-clip-torch==2.26.1
+Requires-Dist: openai-clip==1.0.1
+Requires-Dist: colormath
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: license
+Dynamic: requires-dist

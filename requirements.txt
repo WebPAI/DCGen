@@ -7,11 +7,13 @@ matplotlib
 openai==1.13.3
 ipywidgets
 ipykernel
-Levenshtein
 scikit-image
 google-generativeai
 pyqt5
 lxml==5.2.2
 BeautifulSoup4 
 requests
-flask=3.0.3
+flask==3.0.3
+rapidfuzz==3.6.2
+anthropic
+httpx==0.27.2 

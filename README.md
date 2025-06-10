@@ -39,6 +39,7 @@ Here are two examples from the usefulness study. DCGen demonstrates its effectiv
 
 ```she
 pip install -r requirements.txt
+playwright install
 ```
 
 
@@ -63,54 +64,72 @@ img_seg = ImgSegmentation("0.png", max_depth=1)
 seg.display_tree()
 ```
 
-## 3. DCGen
+## 3. DCGen 
+
+The demo code and prompt can be found in `scripts/experiments.py`
 
 ```python
-# Example prompt
-prompt_dict = {
-    "promt_leaf": 'Here is a screenshot of a webpage with a red rectangular bounding box. Focus on the bounding box area. Respond with the content of the HTML+CSS code.',
-
-    "promt_node": 'Here are 1) a screenshot of a webpage with a red rectangular bounding box , and 2) code of different elements in the bounding box. Utilize the provided code to write a new HTML and CSS file to replicate the website in the bounding box. Here is the code of different parts of the webpage in the bounding box:\n=============\n'
+# Baseline prompt, please refer to scripts/experiments.py
+prompt_direct = """baseline prompt here"""
+# Example prompt for DCGen: Rule based implementation, please refer to scripts/experiments.py
+prompt_dcgen = {
+    "prompt_leaf": """...""",
+    "prompt_root": """..."""
 }
 
-bot = GPT4(key_path="./path/to/key.txt", model="gpt-4o")
-img_seg = ImgSegmentation("0.png", max_depth=1)
-dc_trace = DCGenTrace.from_img_seg(img_seg, bot, prompt_leaf=prompt_dict["promt_leaf"], prompt_node=prompt_dict["promt_node"])
-dc_trace.generate_code(recursive=True, cut_out=False)
-dc_trace.display_tree()
-dc_trace.code
+bot = GPT4("path/to/you/key.txt", model="gpt-4o")
+seg_params = {
+    "max_depth": 2,
+    "var_thresh": 50,
+    "diff_thresh": 45,
+    "diff_portion": 0.9,
+    "window_size": 50
+}
+import os
+os.chdir("../data")
+# run single experiment. Params: bot, input image path, output html path
+dcgen(bot, "../data/demo/0.png", "./test.html") 
+# run dcgen for entire folder. Params: bot, input image folder, output html folder
+dcgen_exp(bot, "./demo/", "dcgen_demo", multi_thread=True, seg_params=seg_params)
+# baseline
+single_turn_exp(bot, "./demo/", f"direct_demo", prompt_direct, multi_thread=True)
+# make sure to move placeholder.png into respective dir before taking screenshots
+os.system("mv placeholder.png dcgen_demo/placeholder.png")
+os.system("mv placeholder.png direct_demo/placeholder.png")
+take_screenshots_for_dir("./dcgen_demo/", replace=True)
+take_screenshots_for_dir("./direct_demo/", replace=True)
 ```
 
-## 4. Calculate Score (linux only)
+## 4. Evaluate 
 
 0. Install requirements for the metric toolkit
 
-   ```shell
-   pip install -r metrics/requirements.txt
-   ```
+    ```shell
+    cd scripts
+    bash install.sh
+    ```
 
-   
-
-1. Modify configurations in `./metrics/Design2Code/metrics/multi_processing_eval.py`: 
+1. Modify configurations in `scripts/evaluate.py`: 
 
    ```python
-   orig_reference_dir = "path/to/original_data_dir"
+   original_reference_dir = "../data/demo"
    test_dirs = {
-           "exp_name": "path/to/exp_data_dir"
-       }
+       "dcgen": "../data/dcgen_demo",
+       "direct": "../data/direct_demo",
+   }
+   exp_name = "test"
    ```
 
-   The `original_data_dir` contains original HTML files `1.html, 2.html, ...`, their corresponding screenshots `1.png, 2.png, ...`, and optionally a placeholder image `placeholder.png`.
+   The `original_reference_dir` contains original HTML files `1.html, 2.html, ...`, their corresponding screenshots `1.png, 2.png, ...`, and the placeholder image `placeholder.png`.
 
-   The `exp_data_dir` contains the generated HTML files with the same name as the original ones `1.html, 2.html, ...`.
+   The `test_dirs` contains the generated HTML files with the same name as the original ones `1.html, 2.html, ...`, and the placeholder image `placeholder.png`.
 
 2. Run the evaluation script
 
 	```shell
-	cd metrics/Design2Code
-	python metrics/multi_processing_eval.py
+	python evaluate.py
 
-
+Note that the fine-grained metrics can only be run on linux or mac.
 
 # DCGen tool
 

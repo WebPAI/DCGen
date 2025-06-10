@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Prototype</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-blue-800 text-white">
+        <div class="container mx-auto flex justify-between items-center py-2">
+            <div class="text-sm">
+                <span>Tel: 809-555-0111 ext. 202, 205</span>
+                <span>Email: info@nic.do</span>
+            </div>
+            <div class="text-sm">
+                <span>Idioma:</span>
+                <select class="bg-blue-800 text-white">
+                    <option>Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <img src="placeholder.png" alt="Logo" class="h-10">
+            <ul class="flex space-x-8">
+                <li><a href="#" class="text-black">INICIO</a></li>
+                <li><a href="#" class="text-black">DOMINIOS</a></li>
+                <li><a href="#" class="text-black">DOMINIOS GUBERNAMENTALES</a></li>
+                <li><a href="#" class="text-black">POLÍTICAS</a></li>
+                <li><a href="#" class="text-black">ACERCA DE NIC.DO</a></li>
+                <li><a href="#" class="text-black">NOTICIAS</a></li>
+                <li><a href="#" class="text-black">AYUDA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8">
+        <!-- Slider -->
+        <div class="bg-gray-200 h-64 flex items-center justify-center">
+            <h2 class="text-xl">Conoce a MiDominio.Do</h2>
+            <button class="bg-blue-600 text-white px-4 py-2 ml-4">Conoce más</button>
+        </div>
+
+        <!-- Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+            <button class="bg-blue-700 text-white py-4">Buscar Dominio</button>
+            <button class="bg-green-600 text-white py-4">Registrar Dominio</button>
+            <button class="bg-yellow-500 text-white py-4">Preguntas Frecuentes</button>
+            <button class="bg-red-600 text-white py-4">Estadísticas</button>
+        </div>
+
+        <!-- News Section -->
+        <section class="mt-12">
+            <h3 class="text-xl font-bold">NOTICIAS</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div class="bg-white p-4 shadow">
+                    <h4 class="font-bold">Cambio a la Política de Solución de Controversias</h4>
+                    <p class="text-sm">26/09/2024</p>
+                    <a href="#" class="text-blue-600">Leer Más</a>
+                </div>
+                <div class="bg-white p-4 shadow">
+                    <h4 class="font-bold">Aviso de Mantenimiento 8:00 AM</h4>
+                    <p class="text-sm">29/09/2024</p>
+                    <a href="#" class="text-blue-600">Leer Más</a>
+                </div>
+                <div class="bg-white p-4 shadow">
+                    <h4 class="font-bold">Aviso de Mantenimiento 7:30 AM</h4>
+                    <p class="text-sm">18/12/2023</p>
+                    <a href="#" class="text-blue-600">Leer Más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Institutions -->
+        <section class="bg-gray-200 mt-12 py-8">
+            <h3 class="text-center text-xl font-bold">INSTITUCIONES RELACIONADAS</h3>
+            <div class="flex justify-center space-x-4 mt-4">
+                <img src="placeholder.png" alt="Institution" class="h-16">
+                <img src="placeholder.png" alt="Institution" class="h-16">
+                <img src="placeholder.png" alt="Institution" class="h-16">
+                <img src="placeholder.png" alt="Institution" class="h-16">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white mt-12">
+        <div class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <h4 class="font-bold">Acerca De NIC.DO</h4>
+                <ul>
+                    <li>Historia</li>
+                    <li>Nuestra Tecnología</li>
+                    <li>Relaciones</li>
+                    <li>25 Años de Delegación del .do</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">¿Necesita Ayuda?</h4>
+                <ul>
+                    <li>Preguntas Frecuentes</li>
+                    <li>Contactenos</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Contactos</h4>
+                <address>
+                    NIC.DO<br>
+                    Pontificia Universidad Católica Madre y Maestra<br>
+                    Tel: 809-555-0111 ext. 202, 205<br>
+                    Fax: 1 809 555-0112
+                </address>
+            </div>
+        </div>
+        <div class="bg-black text-center py-4">
+            <p>Copyright © PUCMM - NIC.DO. All rights reserved</p>
+            <a href="#" class="text-white">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>
