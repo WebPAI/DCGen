@@ -69,13 +69,7 @@ seg.display_tree()
 The demo code and prompt can be found in `scripts/experiments.py`
 
 ```python
-# Baseline prompt, please refer to scripts/experiments.py
-prompt_direct = """baseline prompt here"""
-# Example prompt for DCGen: Rule based implementation, please refer to scripts/experiments.py
-prompt_dcgen = {
-    "prompt_leaf": """...""",
-    "prompt_root": """..."""
-}
+# Please refer to scripts/experiments.py for baseline prompt and DCGen prompt
 
 bot = GPT4("path/to/you/key.txt", model="gpt-4o")
 seg_params = {
