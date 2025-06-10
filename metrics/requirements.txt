@@ -1,7 +1,0 @@
-opencv-python==4.10.0.84
-playwright==1.47.0
-beautifulsoup4==4.12.2
-scikit-learn==1.5.2
-open-clip-torch==2.26.1
-openai-clip==1.0.1
-colormath
