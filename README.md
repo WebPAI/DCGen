@@ -1,17 +1,16 @@
 # Automatically Generating UI Code from Screenshot: A Divide-and-Conquer-Based Approach
 
-This is the artifact for the paper ["Automatically Generating UI Code from Screenshot: A Divide-and-Conquer-Based Approach."](https://arxiv.org/abs/2406.16386) This artifact supplies the DCGen toolkit and supplementary materials for the paper.
+This is the artifact for the paper ["Divide-and-Conquer: Generating UI Code from Screenshots."](https://arxiv.org/abs/2406.16386) The paper is accepted by the ACM International Conference on the Foundations of Software Engineering (FSE'2025). This artifact supplies the DCGen toolkit and supplementary materials for the paper.
 
 
 This repository contains:
 
 1. **Code implementation of DCGen**, i.e., the Python script and instructions to run DCGen to preprocess websites, segment images, and generate UI code from screenshots with DCGen algorithm. 
-2. **Sample dataset**. The sample of our experiment data is available in `/data`. We will release the full dataset as soon as the paper is published.
-3. **Link to supplementary materials.** We provide all the screen recordings in the usefulness study and our prompt details via this [link](https://drive.google.com/drive/folders/1FnR6MTKCSWFsUP__qO-J5YRhSB7RRDI-?usp=sharing).
-4. **A user-friendly tool based on DCGen**.
+2. **Sample dataset**. The sample of our experiment data is available in `/data`. The full dataset is available on :hugs:[HuggingFace](https://huggingface.co/datasets/iforgott/DCGen)
+3. **A user-friendly tool based on DCGen**.
 
 
-Quick links: :tv:[Demo video](#Demo-video) | :pencil:[DCGen Examples](#Examples) | 🖥️[Code usage](#Code-usage) | 🔨[Tool usage](#DCGen-tool) 
+Quick links: :tv:[Demo video](#Demo-video) | :pencil:[DCGen Examples](#Examples) | 🖥️[Code usage](#Code-usage) | 🔨[Tool usage](#DCGen-tool) | :hugs:[Dataset](https://huggingface.co/datasets/iforgott/DCGen)
 
 
 # Abstract
@@ -69,6 +68,7 @@ seg.display_tree()
 The demo code and prompt can be found in `scripts/experiments.py`
 
 ```python
+from scripts.experiments import *
 # Please refer to scripts/experiments.py for baseline prompt and DCGen prompt
 
 bot = GPT4("path/to/you/key.txt", model="gpt-4o")
